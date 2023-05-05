@@ -30,8 +30,13 @@ export default function Chat() {
   const [isOpen, setIsOpen] = React.useState(false)
 
   useEffect(() => {
-    setMessages([...messages,{ response: 'Hello and welcome to Metrobank Philippines customer support! How may I assist you today?' }])
-
+    setMessages([
+      ...messages,
+      {
+        response:
+          'Hello and welcome to Metrobank Philippines customer support! How may I assist you today?',
+      },
+    ])
   }, [])
 
   const handleSendMessage = () => {
@@ -60,7 +65,8 @@ export default function Chat() {
       try {
         setIsLoading(true)
         const message =
-          'Act as a customer support of Metrobank Philippines, ' + newMessage
+          'Act as a customer support of metrobank philippines only and answer only inquiries or concerns regarding metrobank account or banking services. Before giving a response, validate the text if it’s restricted, if yes, your response must be “I cannot help you with that”. Here’s the list of restrictions: 1. The text must be about metrobank and its purpose and functionality. The text is: ' +
+          newMessage
 
         const apiRequestBody = {
           model: 'gpt-3.5-turbo',
@@ -150,7 +156,11 @@ export default function Chat() {
               }}
             >
               <Box sx={{ mr: 2 }}>
-                <img src={logoMB}  alt='logo Metrobank' style={{width: 35, height: 35}}/>
+                <img
+                  src={logoMB}
+                  alt="logo Metrobank"
+                  style={{ width: 35, height: 35 }}
+                />
               </Box>
               <Typography variant="h6">Chat Support</Typography>
             </Toolbar>
