@@ -1,0 +1,47 @@
+.chat-bubble-user {
+  background-color: #014f41;
+  color: #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 80%;
+  float: right;
+  clear: both;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.chat-bubble-user::after {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  right: 10px;
+  border-style: solid;
+  border-width: 10px 10px 0 0;
+  border-color: #014f41 transparent transparent transparent;
+}
+.chat-bubble-ai {
+  background-color: #f5f5f5;
+  color: #000000;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+  white-space: pre-line;
+  line-height: 1.5;
+  max-width: 80%;
+  float: left;
+  clear: both;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.chat-bubble-ai::after {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  left: 10px;
+  border-style: solid;
+  border-width: 10px 10px 0 0;
+  border-color: #f5f5f5 transparent transparent transparent;
+}
