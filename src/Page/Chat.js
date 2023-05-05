@@ -28,9 +28,9 @@ export default function Chat() {
   const [isLoading, setIsLoading] = React.useState(false)
   const [isOpen, setIsOpen] = React.useState(false)
 
-  useEffect(() => {
-    console.log(process.env)
-  }, [])
+  // useEffect(() => {
+  //   console.log(process.env)
+  // }, [])
 
   const handleSendMessage = () => {
     getChimResponse()
