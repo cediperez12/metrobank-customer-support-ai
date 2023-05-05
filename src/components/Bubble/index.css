@@ -1,5 +1,5 @@
 .chat-bubble-user {
-  background-color: #014f41;
+  background-color: #049ED9;
   color: #ffffff;
   border-radius: 10px;
   padding: 10px;
@@ -19,7 +19,7 @@
   right: 10px;
   border-style: solid;
   border-width: 10px 10px 0 0;
-  border-color: #014f41 transparent transparent transparent;
+  border-color: #049ED9 transparent transparent transparent;
 }
 .chat-bubble-ai {
   background-color: #f5f5f5;

@@ -20,6 +20,7 @@ import SendIcon from '@mui/icons-material/Send'
 import Conversation from './Conversation'
 
 import loadingGif from '../assets/loading.gif'
+import logoMB from '../assets/logoMB_icon.png'
 
 export default function Chat() {
   // * Sample Data * ----------------
@@ -28,9 +29,10 @@ export default function Chat() {
   const [isLoading, setIsLoading] = React.useState(false)
   const [isOpen, setIsOpen] = React.useState(false)
 
-  // useEffect(() => {
-  //   console.log(process.env)
-  // }, [])
+  useEffect(() => {
+    setMessages([...messages,{ response: 'Hello and welcome to Metrobank Philippines customer support! How may I assist you today?' }])
+
+  }, [])
 
   const handleSendMessage = () => {
     getChimResponse()
@@ -110,10 +112,10 @@ export default function Chat() {
           bottom: 16,
           right: 16,
           zIndex: 1000,
-          backgroundColor: '#014F41',
+          backgroundColor: '#049ED9',
           color: '#ffffff',
           '&:hover': {
-            backgroundColor: '#014F41',
+            backgroundColor: '#001A88',
           },
         }}
       >
@@ -142,13 +144,13 @@ export default function Chat() {
           <AppBar position="static" color="transparent" elevation={0}>
             <Toolbar
               style={{
-                backgroundColor: '#014F41',
-                color: '#ffffff',
+                backgroundColor: '#FFFFFF',
+                color: '#001A88',
                 borderRadius: '20px 20px 0px 0px',
               }}
             >
               <Box sx={{ mr: 2 }}>
-                <SupportAgentIcon fontSize={'large'} />
+                <img src={logoMB}  alt='logo Metrobank' style={{width: 35, height: 35}}/>
               </Box>
               <Typography variant="h6">Chat Support</Typography>
             </Toolbar>
@@ -195,7 +197,7 @@ export default function Chat() {
                       />
                     ) : (
                       <SendIcon
-                        style={{ color: newMessage ? '#014F41' : '#828F8D' }}
+                        style={{ color: newMessage ? '#049ED9' : '#828F8D' }}
                       />
                     )}
                   </IconButton>

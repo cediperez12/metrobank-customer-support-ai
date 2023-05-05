@@ -9,7 +9,9 @@ const Conversation = ({messages}) => {
   const messagesRender = messages.map((message,index) =>{
       return (
         <main key= { index }>
-         <BubbleUser message = { message.query }/>
+       {
+          message.query && <BubbleUser message = { message.query }/>
+        } 
          <BubbleAI  message={ message.response }/> 
         </main>
        )
